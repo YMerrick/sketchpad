@@ -3,11 +3,15 @@ const sketchPad = document.querySelector(".main-container");
 const resetBtn = document.querySelector("#reset");
 
 sketchPad.addEventListener("mouseover", (e) => {
+    if (e.target.classList.value === "main-container") return
     addBackgroundColor(e.target);
 });
 
 resetBtn.addEventListener("click", () => {
-    const size = Number(prompt("Enter number of pixels:"));
+    let size;
+    do {
+        size = parseInt(prompt("Enter number of pixels:"))
+    } while (!size || (size > 100) || (size < 1));
     populatePage(sketchPad,size);
 });
 

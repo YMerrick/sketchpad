@@ -17,8 +17,8 @@ body {
 }
 
 .main-container {
-    height: 75vh;
-    width: 80%;
+    height: 80vh;
+    width: 40%;
     display: flex;
     flex-wrap: wrap;
     outline: solid black 2px;
